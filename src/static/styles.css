@@ -59,19 +59,81 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 18px 16px;
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.08);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .activity-card h4 {
-  margin-bottom: 10px;
+  margin: 0;
   color: #0066cc;
+  font-size: 1.15rem;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #e8f1ff;
+  color: #1a237e;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .activity-card p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.participants-section {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e7ebf1;
+}
+
+.participants-section strong {
+  display: block;
   margin-bottom: 8px;
+  color: #1a237e;
+}
+
+.participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f3f6ff;
+  margin-bottom: 6px;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.participants-empty {
+  margin: 0;
+  color: #666;
+  font-style: italic;
 }
 
 .form-group {
@@ -106,6 +168,51 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+button.participant-remove {
+  background: #e53935;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+}
+
+button.participant-remove::before {
+  content: "×";
+  transform: translateY(-1px);
+}
+
+button.participant-remove:hover {
+  background: #c62828;
+}
+
+button.participant-remove {
+  appearance: none;
+  border: none;
+  background: #e53935;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button.participant-remove:hover {
+  background: #c62828;
+  transform: translateY(-1px);
 }
 
 .message {
